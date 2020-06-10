@@ -1,26 +1,167 @@
-<html lang="ru"><head><style type="text/css" id="night-mode-pro-style"></style>
+<html lang="ru">
+  <head>
+    <style type="text/css" id="night-mode-pro-style"></style>
     <link type="text/css" rel="stylesheet" id="night-mode-pro-link">
-
     <meta charset="utf-8">
-    <title>GitHub/johnzet39</title>
-    <link rel="stylesheet" href="css/style.css">
+	<title>GitHub/johnzet39</title>
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+	<!-- awesome -->
+	<!-- <link rel="stylesheet" href="libs/awesome/css/all.min.css"> -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
 </head>
 <body> 
-  <div class="wrapper">
+    <div id="navigation" class="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 offset-md-1">
+					<div></div>
+						<div class="navbar">
+							<ul class="navbar-list">
+								<li class="active"><a href="#main">Home</a></li>
+								<li><a href="#projects">Projects</a></li>
+								<li><a href="#contacts">Contacts</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="col-sm-1">
+					<div class="logo">
+						<a href="http://github.com/johnzet39"><i class="fab fa-github-square" style="font-size: 0.7em;"></i></a>
+					</div>
+				</div> -->
+            </div>
+        </div>
+	</div> 
 
-    <div class="content">
-      <header>
-        <a class="logo" href="https://github.com/johnzet39">  
-          <img style="vertical-align:middle; margin:10; margin-top:250" src="img/bane.svg" width="100" height="100" alt="Johnzet39">
-          <p><span style="">GitHub/johnzet39</span></p>
-        </a>
-      </header>
-    </div>  
+	<div id="main" class="main main-bg">
+		<div class="overlay">
+			<div class="row">
+				<div class="main-text">
+					<div class="main__name"><span>Evgeniy Z Johnzet39</span></div>
+					<div class="main__desc"><span>Developer</span></div>
+				</div>
+				<div class="smooth-scroll">
+					<a id="arrow_link" href="#projects">
+						<i class="arrow down"></i>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
 
-    <footer class="footer">
-      <p>&copy 2019 Johnzet39 </p>    
-    </footer>
-  </div>
+	<div id="projects" class="header">
+		<div class="container">
+			<div class="row">
+				<div class="header-cont">
+					<div class="text-header col-md-12 text-center">
+						<p>Projects</p>
+					</div>
+					<div class="row">
+						<div class="projects-cont">
+							<!-- projects -->
+							<div class="project" 
+								data-project="project1" 
+								data-title="Buildings year map"  
+								data-modaltarget="modaal"
+								data-content="content/projects/BuildingsYear/project.html"
+								style="background-image: url('content/projects/BuildingsYear/image1.png')">
+								<div class="overlay-img">Buildings year map</div>
+							</div>
+							<div class="project" 
+								data-project="project2" 
+								data-title="QConsole"  
+								data-modaltarget="modaal" 
+								data-content=""
+								style="background-image: url('content/projects/QConsole/qconsole.png')">
+								<div class="overlay-img">QConsole Desktop version</div>
+							</div>
+							<div class="project" 
+								data-project="project3" 
+								data-title="QConsole.Web"  
+								data-modaltarget="modaal" 
+								data-content=""
+								style="background-image: url('content/projects/QConsole.Web/qconsoleweb.png')">
+								<div class="overlay-img">QConsole Web version</div>
+							</div>
+							<div class="project" 
+								data-project="project4" 
+								data-title="AddAgree"  
+								data-modaltarget="modaal" 
+								data-content=""
+								style="background-image: url('content/projects/AddAgree/addagree.png')">
+								<div class="overlay-img">Map service</div>
+							</div>
+							<div class="project" data-project="project5" data-modaltarget="modaal" ></div>
+							<div class="project" data-project="project6" data-modaltarget="modaal" ></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="contacts" class="header">
+		<div class="container">
+			<div class="row">
+				<div class="header-cont">
+					<div class="text-header col-md-12 text-center">
+						<p>Contacts</p>
+					</div>
+					<div class="col-md-8 offset-md-2">
+						<div class="row">
+							<div class="col-md-4 text-center">
+								<div class="iconn"><i class="fa fa-envelope fa-2x"></i></div>
+								<p><a href="mailto:johnzetg@gmail.com">johnzetg@gmail.com</a></p>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="iconn"><i class="fa fa-map-marker fa-2x"></i></div>
+								<p>Russia, Kaliningrad</p>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="iconn"><i class="fa fa-github fa-2x"></i> </div>
+								<p><a href="https://github.com/johnzet39">github.com</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="text-center">
+					<span>© 2020 Evgeniy Z</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Modal -->
+	<div class="modaal" id="modaal">
+		<div class="modaal-dialog">
+			<div class="modaal-header">
+				<div class="modaal-header__title">...</div>
+				<button class="modaal-close btn" aria-label="close modal" data-close>&times;</button>
+			</div>
+			<section class="modaal-content">content</section>
+			<!-- <footer class="modaal-footer">footer</footer> -->
+		</div>
+	</div>
+	<!-- End Modal -->
 
 </body>
 </html>
+
+<script src="js/main.js"></script>

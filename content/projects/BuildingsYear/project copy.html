@@ -1,0 +1,46 @@
+<content id="project1">
+    <div class="content-modal">
+        <img class="cm-main-image" src="/content/projects/BuildingsYear/image1.png">
+
+        <div class="cm-image">
+            <img class="cm-image-animated" src="/content/projects/BuildingsYear/image1.png">
+            <div class="cm-image-play isvisible"></div>
+        </div>
+        <div class="cm-desc">
+            <p>
+                Leaflet-based project.						
+            </p>
+        </div> 
+    </div>
+</content>
+
+<!-- <script>
+    // play gifs on hover
+    $(function(){
+        $('.animated').hover(
+            function(){
+                $(this).attr('src', $(this).attr('src').replace('.png', '.gif'))
+            },
+            function(){
+                $(this).attr('src', $(this).attr('src').replace('.gif', '.png'))
+            }
+        )
+    });
+</script> -->
+
+<script>
+    // play gifs on hover
+    $(function(){
+        $('.cm-image').on('click', function(e){
+            if ($(this).find('.cm-image-play').hasClass('isvisible')){
+                $(this).find('.cm-image-animated').attr('src', $(this).find('.cm-image-animated').attr('src').replace('.png', '.gif'));
+                $(this).find('.cm-image-play').removeClass('isvisible');
+            }
+            else{
+                $(this).find('.cm-image-animated').attr('src', $(this).find('.cm-image-animated').attr('src').replace('.gif', '.png'));
+                $(this).find('.cm-image-play').addClass('isvisible');
+            }
+            
+        });
+    });
+</script>
