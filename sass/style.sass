@@ -1,0 +1,370 @@
+$maincolor: #131313
+
+// @font-face
+//     font-family: 'Open Sans' 
+//     src: url('fonts\Open_Sans\OpenSans-Regular.ttf')
+
+*
+    font-family: 'Roboto', sans-serif
+html
+    a
+        text-decoration: none
+        color: $maincolor
+        &:hover
+            text-decoration: none
+body
+    margin: 0px
+    
+.no-scroll
+    overflow: hidden
+    height: 100vh
+    padding-right: 16px
+    // position: fixed
+    // overflow-y: scroll 
+    // width: 100%
+    
+
+//1. NAVIGATION
+// ================================================
+
+.navigation
+    width: 100%
+    position: fixed
+    z-index: 1000
+    top: 0
+    left: 0
+    transition: all 0.3s ease-out
+    .row
+        border-bottom: solid #3a3a3a 1px
+    .logo
+        padding-top: 10px
+        float: right
+    a
+        color: #ffffff
+        display: block
+        font-size: 1.5em
+        padding-top: 20px
+        transition: all 0.3s ease-out
+    .navbar
+        padding: 0
+        float: left
+        &-list
+            list-style-type: none
+            margin-bottom: 0
+            padding-left: 0
+        li
+            float: left
+            & a
+                display: block
+                text-align: center
+                padding: 30px 16px
+                color: rgba(255, 255, 255, 0.6)
+                font-size: 0.8em
+                transition: all 0.3s ease-out
+                &:hover
+                    color: #ffffff
+            &.active a
+                color: rgba(255, 255, 255, 1)
+                transition: all 0.3s ease-out
+
+.navigation.navigation-bg
+    background: #ffffff
+    border-bottom: 1px solid #f1f1f1
+    transition: all 0.4s ease-out
+    .row
+        border-bottom: none
+    a
+        color: $maincolor
+        padding-top: 7px
+        transition: all 0.4s ease-out
+    li a
+        color: $maincolor
+        padding: 16px 16px
+        transition: all 0.4s ease-out
+        &:hover
+            color: #1facff
+    li.active a
+        color: #1facff
+        padding: 16px 16px
+        transition: all 0.4s ease-out
+
+//2. HOME 
+// ================================================
+@keyframes slide-down
+    100%
+        top: 0px
+
+.main
+    height: 100vh
+    &-text
+        color: white
+        position: absolute
+        text-align: center
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 80%  
+        letter-spacing: 2
+        opacity: 0.9
+        &:hover
+            opacity: 1
+            transition: all 0.4s         
+    &__name
+        font-size: 2.2em
+        font-weight: 700
+        margin-bottom: 0px
+        overflow: hidden
+        span
+            //--animation
+            position: relative
+            top: -50px
+            animation-delay: 1s
+            animation-duration: 1s
+            animation-fill-mode: forwards
+            animation-name: slide-down
+    &__desc
+        font-size: 1.2em
+        font-weight: 400
+        user-select: none
+        opacity: 0.7
+        overflow: hidden
+        span
+            //--animation
+            position: relative
+            top: -30px
+            animation-delay: 1.7s
+            animation-duration: 0.7s
+            animation-fill-mode: forwards
+            animation-name: slide-down
+.main-bg
+    background-image: url('../img/background.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    z-index: 1
+    background-position: 0px 0px
+    .overlay
+        position: absolute
+        background: rgba(0, 0, 0, 0.4)
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        content: ""
+        z-index: 2
+
+.smooth-scroll
+    display: block
+    bottom: 50px
+    position: absolute
+    margin: auto
+    left: 0
+    right: 0
+    transition: all 750ms ease-in-out
+    width: 30px
+    height: 25px
+    overflow: hidden
+    text-align: center
+    opacity: 0.8
+    &:hover
+        opacity: 1
+    .arrow
+        width: 15px
+        height: 15px
+        border: solid white
+        border-width: 0 3px 3px 0
+        display: inline-block
+        padding: 3px
+        //--animation
+        top: -25px
+        position: relative
+        animation-delay: 2s
+        animation-duration: 1s
+        animation-fill-mode: forwards
+        animation-name: slide-down
+
+    .down
+        transform: rotate(45deg)
+    &.lift
+        bottom: 64px
+
+// 3. PROJECTS
+// ================================================
+
+#projects
+    padding: 90px 0 180px
+    background: #ffffff
+    .projects-cont
+        width: 100%
+        text-align: center
+        .project
+            display: inline-block
+            width: 350px
+            height: 260px
+            margin: 5px
+            background-size: cover
+            background-repeat: no-repeat
+            z-index: 1
+            background-position: center
+            transition: all 0.3s ease-in-out
+            border: solid #a8a8a8
+            border-width: 1px
+            position: relative
+            &:hover
+                // transform: scale(1.005)
+                // border: none
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3)
+            .overlay-img 
+                position: absolute
+                bottom: 0
+                background: rgba(0, 0, 0, 0.5)
+                color: #f1f1f1
+                width: 100%
+                opacity: 0
+                color: white
+                font-size: 1em
+                padding: 10px
+                text-align: center
+                transition: .2s ease
+            &:hover .overlay-img
+                opacity: 1
+
+// 4. CONTACTS
+// ================================================
+#contacts
+    padding: 100px 0 100px
+    background: #f2f2f2
+    .text-center
+        text-align: center
+
+// 5. FOOTER
+// ================================================
+#footer
+    .text-center
+        text-align: center
+        width: 100%
+        padding: 50 0
+        font-size: 1em
+        
+        
+
+
+
+
+
+.header
+    &-cont
+        width: 100%
+        position: relative
+        .text-header
+            font-weight: 700
+            font-size: 2.2em
+            margin-bottom: 30px
+        p
+            font-size: 0.8em
+    .iconn
+        width: 35px
+        height: 35px
+        margin: 30 auto
+
+
+
+
+// 6. MODAL WINDOWS
+// ================================================
+
+.modaal
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #000000c2
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 1rem
+    cursor: pointer
+    visibility: hidden
+    opacity: 0
+    transition: all 0.25s ease-in
+    z-index: 1000
+    &-dialog
+        position: relative
+        max-width: 1200px
+        width: 90%
+        max-height: 90vh
+        border-radius: 5px
+        background: white
+        overflow: auto
+        cursor: default
+    &-dialog > *
+    padding: 1rem
+
+    .modaal-header,
+    .modaal-footer
+        background: #efefef
+
+    .modaal-header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &__title
+            font-weight: 700
+            font-size: 1em
+            text-align: center
+            width: 100%
+
+    .modaal-header
+        .modaal-close
+            font-size: 1.5rem
+
+    .modal p + p
+        margin-top: 1rem
+
+.modaal.is-visible
+    visibility: visible
+    opacity: 1
+
+
+.content-modal
+    padding: 10px
+    .cm-main-image
+        width: 100%
+        padding: 10px
+        border-radius: 15px
+    .cm-image-gif
+        width: 500px
+        margin: auto
+        position: relative
+        cursor: pointer
+        text-align: center
+        .cm-gif
+            width: 100%
+        &:before 
+            pointer-events: none
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 50px
+            height: 50px
+            border: 3px solid rgba(255, 255, 255, 0.7)
+            border-radius: 50%
+            background-color: rgba(204, 209, 217, 0.3)
+            // https://fontawesome.com/cheatsheet?from=io
+            content: '\f04b'
+            font-family: 'FontAwesome'
+            text-align: center
+            line-height: 45px
+            font-size: 16px
+            color: #ffffff
+            position: absolute
+            padding-left: 2px
+        &:hover::before
+            box-shadow: 0px 0px 10px #ffffff
+        &.playing::before
+            display: none
+    .cm-desc
+        padding: 10px
+        p
+            text-indent: 1.5em
+            text-align: justify

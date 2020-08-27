@@ -1,0 +1,35 @@
+<content id="project1">
+    <div class="content-modal">
+        <img class="cm-main-image" src="/content/projects/BuildingsYear/image1.png">
+
+        <figure class="cm-image-gif"  style="width: 200px;" >
+            <img class="cm-gif" src="/content/projects/BuildingsYear/image1.png" data-alt="/content/projects/BuildingsYear/image1.gif"> 
+        </figure>
+
+        <div class="cm-desc">
+            <p>
+                Leaflet-based project.						
+            </p>
+        </div> 
+    </div>
+</content>
+
+
+
+<script>
+    $('.cm-image-gif').on('click', function() {
+        var $this   = $(this);
+        var $img    = $this.children('img');
+        var $imgSrc = $img.attr('src');
+        var $imgAlt = $img.attr('data-alt');
+        var $imgExt = $imgAlt.split('.');
+        
+        if($imgExt[1] === 'gif') {
+            $img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
+            $this.addClass("playing");
+        } else {
+            $img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
+            $this.removeClass("playing");
+        }
+    });
+</script>
